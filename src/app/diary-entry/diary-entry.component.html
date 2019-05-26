@@ -1,30 +1,43 @@
 <div class="container">
   <div class="entry-detail">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-6 left-field">
         <form>
             <div class="form-group">
                 <div class="input-group date" id="datetimepicker2" data-target-input="nearest">
-                    <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker2"/>
+                    <input type="text" placeholder="Select Date" class="form-control datetimepicker-input" data-target="#datetimepicker2"/>
                     <div class="input-group-append" data-target="#datetimepicker2" data-toggle="datetimepicker">
                         <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                     </div>
                 </div>
             </div>
           <div class="form-group">
-            <label for="title">Title</label>
-            <input type="text" class="form-control" id="title">
+            <input type="text" class="form-control" id="title" placeholder="Title">
           </div>
           <div class="form-group">
-            <label for="comment">Comment:</label>
-            <textarea class="form-control" rows="5" id="comment"></textarea>
+            <textarea class="form-control" rows="5" id="comment" placeholder="Write"></textarea>
           </div>
-          <div>
-            <button class="btn btn-danger">Save</button>
+          <div class="d-flex justify-content-center">
+            <button class="btn save-btn">Save</button>
           </div>
         </form>
       </div>
-      <div class="col-md-6"></div>
+      <div class="col-md-6">
+        <div class="diary-display">
+          <div class="d-flex justify-content-end date-time">
+            <p>26May2019 <span>9:00 am</span></p>
+          </div>
+          <div class="d-flex justify-content-center align-items-center title">
+            <h2>Title</h2>
+          </div>
+          <div class="content">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+               Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                 It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+          </div>
+        </div>
+      </div>
     </div>
     </div>
 </div>

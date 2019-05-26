@@ -1,0 +1,18 @@
+.entry-detail{margin: 60px auto;}
+.diary-display{height: 100%;position: relative;background: #fff;box-shadow: 0px 4px 6px 2px #ce880b;padding: 20px 15px;z-index: 1;
+    :before{content:'';background: url("../../assets/images/flower-sm.png")no-repeat;position: absolute;left: 0;top: 0;width: 200px;height: 200px;z-index: -1;}
+    :after{content:'';background: url("../../assets/images/flower-botm.png")no-repeat;position: absolute;right: 0;bottom: 0;width: 200px;height: 200px;z-index: -1;}
+    .content{padding: 0px 30px;}
+    .date-time p{font-family: "DancingScript-Regular";font-size: 18px;}
+}
+.title h2{font-family: "DancingScript-Bold";}
+.content p{font-family: "DancingScript-Regular";font-size: 24px;}
+.left-field{
+    input,textarea.form-control{background: transparent;
+        border: none;
+        border-bottom: 1px solid #fff;
+        border-radius: 0px;color: #fff;}
+    .form-group ::placeholder{color: #eacf4f;}
+    button.save-btn{background: #eacf4f;border: 1px solid #eacf4f;padding: 8px 40px;color: #000;border-radius: 30px;}
+    button.save-btn:hover{background: transparent;color: #eacf4f;}
+}
