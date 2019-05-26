@@ -1,5 +1,5 @@
 .entry-detail{margin: 60px auto;}
-.diary-display{height: 100%;position: relative;background: #fff;box-shadow: 0px 4px 6px 2px #ce880b;padding: 20px 15px;z-index: 1;
+.diary-display{height: 100%;min-height: 540px;position: relative;background: #fff;box-shadow: 0px 2px 6px 0px #ff96bd;padding: 20px 15px;z-index: 1;
     :before{content:'';background: url("../../assets/images/flower-sm.png")no-repeat;position: absolute;left: 0;top: 0;width: 200px;height: 200px;z-index: -1;}
     :after{content:'';background: url("../../assets/images/flower-botm.png")no-repeat;position: absolute;right: 0;bottom: 0;width: 200px;height: 200px;z-index: -1;}
     .content{padding: 0px 30px;}

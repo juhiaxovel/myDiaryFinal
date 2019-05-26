@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import $ from 'jquery'
 // var moment = require('moment');
 import * as moment from 'moment';
@@ -11,7 +12,12 @@ import * as moment from 'moment';
   styleUrls: ['./diary-entry.component.scss']
 })
 export class DiaryEntryComponent implements OnInit {
-
+  DiaryField = new FormGroup({
+    dateTime: new FormControl (''),
+    bodyContent: new FormControl ('', Validators.required),
+    diaryTitle: new FormControl ('', Validators.required)
+  })
+  pContent: string = '';
   constructor() { }
 
   ngOnInit() {
