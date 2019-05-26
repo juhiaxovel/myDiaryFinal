@@ -14,7 +14,7 @@ import { DiaryEntryComponent } from './diary-entry/diary-entry.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
