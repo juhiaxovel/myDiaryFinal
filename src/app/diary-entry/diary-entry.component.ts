@@ -16,6 +16,7 @@ export class DiaryEntryComponent implements OnInit {
 
   ngOnInit() {
     // load datepicker
+    
     this.loadDateTimePicer();
    
     
