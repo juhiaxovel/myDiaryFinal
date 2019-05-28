@@ -1,0 +1,19 @@
+<div class="container">
+  <form [formGroup]="Loginform" (ngSubmit)="onSubmit()">
+    <div class="login-card card">
+        <div class="form-group">
+            <label>UserName:</label>
+            <input type="text" formControlName="LoginName" class="form-control" id="user" placeholder="UserName/UserId">
+          </div>
+          <div class="form-group">
+              <label>Password:</label>
+              <input type="password" formControlName="loginPassword" class="form-control" id="pwd" placeholder="Password">
+          </div>
+          <div><a href="#">Forgot Password?</a></div>
+          <div class="d-flex justify-content-center mt-5">
+              <button type="submit" [disabled]="!Loginform.valid" class="btn login-btn">LOGIN</button>
+          </div>
+          <div><p>New user? <a [routerLink]="['/signup']">Create a new account</a></p></div>
+    </div>
+  </form>
+</div>

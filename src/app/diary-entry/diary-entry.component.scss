@@ -1,12 +1,14 @@
 .entry-detail{margin: 60px auto;}
 .diary-display{height: 100%;min-height: 540px;position: relative;background: #fff;box-shadow: 0px 2px 6px 0px #ff96bd;padding: 20px 15px;z-index: 1;
-    :before{content:'';background: url("../../assets/images/flower-sm.png")no-repeat;position: absolute;left: 0;top: 0;width: 200px;height: 200px;z-index: -1;}
-    :after{content:'';background: url("../../assets/images/flower-botm.png")no-repeat;position: absolute;right: 0;bottom: 0;width: 200px;height: 200px;z-index: -1;}
-    .content{padding: 0px 30px;}
+    .content{margin: 0px 30px;height: 395px;overflow: hidden;background: url("../../assets/images/textarea_background_light.png")repeat rgba(0, 0, 0, 0);
+    }
     .date-time p{font-family: "DancingScript-Regular";font-size: 18px;}
 }
-.title h2{font-family: "DancingScript-Bold";}
-.content p{font-family: "DancingScript-Regular";font-size: 24px;}
+.diary-display:before{content:'';background: url("../../assets/images/flower-sm.png")no-repeat;position: absolute;left: 0;top: 0;width: 200px;height: 200px;z-index: -1;}
+.diary-display:after{content:'';background: url("../../assets/images/flower-botm.png")no-repeat;position: absolute;right: 0;bottom: 0;width: 200px;height: 200px;z-index: -1;}
+.content p:after{content: '';background: url("../../assets/images/signature.png")no-repeat;position: absolute;width: 24px;height: 24px;}
+.title h2{font-family: "DancingScript-Bold";width: 70%;word-break: break-all;text-align: center;}
+.content p{font-family: "DancingScript-Regular";font-size: 20px;word-break: break-all;line-height: 26px;}
 .left-field{
     input,textarea.form-control{background: transparent;
         border: none;

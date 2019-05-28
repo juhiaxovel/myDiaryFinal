@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="signIn-card card">
+    <form [formGroup]="registerForm" (ngSubmit)="onSignUp()">
+      <div class="form-group">
+        <label>UserName:</label>
+        <input type="text" formControlName="UserName" class="form-control" placeholder="UserName">
+        <p class="alert-danger" *ngIf="registerForm.controls['UserName'].dirty && registerForm.controls['UserName'].invalid">{{errorMsg.UserName}}</p>
+      </div>
+      <div class="form-group">
+        <label>Email:</label>
+        <input type="email" formControlName="UserEmail" class="form-control" placeholder="Email">
+        <p class="alert-danger" *ngIf="registerForm.controls['UserEmail'].dirty && registerForm.controls['UserEmail'].invalid">{{errorMsg.UserEmail}}</p>
+      </div>
+      <div class="form-group">
+        <label>Password:</label>
+        <input type="password" formControlName="UserPassword" class="form-control" placeholder="Password">
+        <p class="alert-danger" *ngIf="registerForm.controls['UserPassword'].dirty && registerForm.controls['UserPassword'].invalid">{{errorMsg.UserPassword}}</p>
+      </div>
+      <div class="form-group">
+        <label>Confirm Password:</label>
+        <input type="password" formControlName="confirmPassword" class="form-control" placeholder="Confirm Password">
+        <p class="alert-danger" *ngIf="registerForm.controls['confirmPassword'].dirty && registerForm.controls['confirmPassword'].invalid">{{errorMsg.confirmPassword}}</p>
+      </div>
+      <div class="text-center"><button type="submit"  class="btn y-btn">SignIn</button></div>
+      <div><p>Already have an account? <a [routerLink]="['']">LogIn</a></p></div>
+    </form>
+  </div>
+</div>

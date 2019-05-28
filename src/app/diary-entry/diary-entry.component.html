@@ -5,33 +5,33 @@
         <form [formGroup]="DiaryField" (ngSubmit)="onSubmit()">
             <div class="form-group">
                 <div class="input-group date" id="datetimepicker2" data-target-input="nearest">
-                    <input type="text" formControlName="dateTime" [(ngModel)]="dDate" placeholder="Select Date" class="form-control datetimepicker-input" data-target="#datetimepicker2"/>
+                    <input type="text" #datetimepicker formControlName="dateTime" placeholder="Select Date" (blur)="test(datetimepicker.value)" class="form-control datetimepicker-input" data-target="#datetimepicker2"/>
                     <div class="input-group-append" data-target="#datetimepicker2" data-toggle="datetimepicker">
                         <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                     </div>
                 </div>
             </div>
           <div class="form-group">
-            <input type="text" formControlName="diaryTitle" [(ngModel)]="titletext" class="form-control" id="title" placeholder="Title">
+            <input type="text" formControlName="diaryTitle" class="form-control" id="title" placeholder="Title">
           </div>
           <div class="form-group">
-            <textarea class="form-control" formControlName="bodyContent" rows="5" id="comment" [(ngModel)]="pContent" placeholder="Write"></textarea>
+            <textarea class="form-control" (keyup)="onkey($event)" formControlName="bodyContent" rows="5" id="comment" placeholder="Write"></textarea>
           </div>
-          <div class="d-flex justify-content-center">
-            <button class="btn save-btn">Save</button>
+          <div class="d-flex justify-content-center mt-5">
+            <button type="submit" [disabled]="!DiaryField.valid" class="btn save-btn">Save</button>
           </div>
         </form>
       </div>
       <div class="col-md-6">
         <div class="diary-display">
           <div class="d-flex justify-content-end date-time">
-            <p>26May2019 <span>9:00 am</span></p>
+            <p>{{DiaryField.get('dateTime').value}}</p>
           </div>
           <div class="d-flex justify-content-center align-items-center title">
-            <h2>{{titletext}}</h2>
+            <h2>{{DiaryField.get('diaryTitle').value}}</h2>
           </div>
           <div class="content">
-            <p>{{pContent}}</p>
+            <p>{{DiaryField.get('bodyContent').value}}</p>
           </div>
         </div>
       </div>

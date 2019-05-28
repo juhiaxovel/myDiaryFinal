@@ -5,10 +5,10 @@
             <div class="d-flex align-items-center align-items-md-end align-items-lg-end logo-text"><img src="../../assets/images/diary-logo.png"></div>
             <div class="support-link">
               <ul class="d-flex justify-content-center align-items-center">
-                <li> <a target="_blank" href="#">Home</a></li>
+                <li> <a [routerLink]="['/signup']" routerLinkActive="router-link-active"  href="#">Register</a></li>
                 <li><a href="#">Public Diaries</a></li>
-                <li><a href="#">Create new Diary</a></li>
-                <li><a href="#">Manage your Diary</a></li>
+                <li><a routerLink="/create">Create new Diary</a></li>
+                <li><a [routerLink]="['/manage']">Manage your Diary</a></li>
                 <li><a href="#">About</a></li>
               </ul>
              

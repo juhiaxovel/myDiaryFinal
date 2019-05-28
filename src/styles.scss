@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap.min.css';
+$fa-font-path: "../node_modules/font-awesome/fonts";
+@import '~font-awesome/scss/font-awesome.scss';
 /* font converted using font-converter.net. thank you! */
 @font-face {
     font-family: "DancingScript-Bold";
@@ -29,3 +31,8 @@
 body{background-color: transparent; background: url("./assets/images/bg-site.jpg")repeat;}
 .form-control:focus{box-shadow: none;}
 $color-yellow: #eacf4f;
+.input-group-text{background-color: #eacf4f;border: 1px solid #eacf4f;border-radius: 0px; }
+.bootstrap-datetimepicker-widget table td.active, .bootstrap-datetimepicker-widget table td.active:hover{background-color: #eacf4f;color: #000;}
+.bootstrap-datetimepicker-widget a[data-action]{color: #000;background: #eacf4f;}
+button.y-btn{color: #000;background: #eacf4f;padding: 6px 30px;border-radius: 30px;}
+.card{background: #fff;box-shadow: 0px 0px 5px 0px #ccc;padding: 20px;border-radius: 0px;width: 60%;margin: 20px auto;}
